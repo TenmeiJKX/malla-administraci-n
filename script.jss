@@ -1,3 +1,4 @@
+document.addEventListener('DOMContentLoaded', () => {
 const cursos = [
     // NIVEL 1
     { id: 1, nivel: 1, codigo: "ADMI5449", nombre: "Fundamentos de Gestión Empresarial", creditos: 4, req: "Ninguno" },
@@ -176,4 +177,5 @@ window.addEventListener('click', (event) => {
     }
 });
 
-renderizarMalla();
+    renderizarMalla();
+    });
