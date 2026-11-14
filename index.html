@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malla Interactiva - Administración de Empresas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Malla Curricular: Administración de Empresas</h1>
+        <p>Haz clic en un curso para ver sus detalles y estado.</p>
+        <div class="leyenda">
+            <span class="box aprobado"></span> Aprobado
+            <span class="box reprobado"></span> Reprobado
+            <span class="box pendiente"></span> Pendiente
+        </div>
+    </header>
+
+    <main id="malla-container">
+        <!-- El contenido se generará con JavaScript -->
+    </main>
+
+    <!-- Ventana Modal para detalles del curso -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modal-title">Nombre del Curso</h2>
+            <p><strong>Código:</strong> <span id="modal-code"></span></p>
+            <p><strong>Créditos:</strong> <span id="modal-credits"></span></p>
+            <p><strong>Requisitos:</strong> <span id="modal-reqs"></span></p>
+            <p><strong>Estado:</strong> <span id="modal-status"></span></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
