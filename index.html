@@ -9,56 +9,17 @@
 <body>
     <header>
         <h1>Malla Curricular: Administración de Empresas</h1>
-        <p>Haz clic en un curso para ver sus detalles y estado.</p>
-        <div class="leyenda">
-            <span class="box aprobado"></span> Aprobado
-            <span class="box reprobado"></span> Reprobado
-            <span class="box pendiente"></span> Pendiente
-        </div>
-    </header>
-
-    <main id="malla-container">
-        <!-- El contenido se generará con JavaScript -->
-    </main>
-
-    <!-- Ventana Modal para detalles del curso -->
-    <div id="modal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2 id="modal-title">Nombre del Curso</h2>
-            <p><strong>Código:</strong> <span id="modal-code"></span></p>
-            <p><strong>Créditos:</strong> <span id="modal-credits"></span></p>
-            <p><strong>Requisitos:</strong> <span id="modal-reqs"></span></p>
-            <p><strong>Estado:</strong> <span id="modal-status"></span></p>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
-</body>
-    <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Malla Interactiva - Administración de Empresas</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <h1>Malla Curricular: Administración de Empresas</h1>
         <p>Haz clic en un curso para ingresar tu nota.</p>
         <div class="leyenda">
             <span class="box aprobado"></span> Aprobado (>= 13)
             <span class="box reprobado"></span> Reprobado (< 13)
             <span class="box pendiente"></span> Pendiente
+            <span class="box bloqueado"></span> Bloqueado (Falta requisito)
         </div>
     </header>
 
-    <main id="malla-container">
-        <!-- El contenido se generará con JavaScript -->
-    </main>
+    <main id="malla-container"></main>
 
-    <!-- Ventana Modal para detalles del curso -->
     <div id="modal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
@@ -67,7 +28,11 @@
             <p><strong>Créditos:</strong> <span id="modal-credits"></span></p>
             <p><strong>Requisitos:</strong> <span id="modal-reqs"></span></p>
             
-            <!-- NUEVO CAMPO PARA LA NOTA -->
+            <!-- Mensaje de alerta si está bloqueado -->
+            <p id="mensaje-bloqueo" style="color: #d32f2f; display: none; font-weight: bold;">
+                🔒 Debes aprobar los prerrequisitos primero para llevar este curso.
+            </p>
+
             <div class="nota-container">
                 <label for="input-nota"><strong>Tu Nota:</strong></label>
                 <input type="number" id="input-nota" min="0" max="20" placeholder="Ej. 15">
@@ -78,5 +43,4 @@
 
     <script src="script.js"></script>
 </body>
-</html>
 </html>
